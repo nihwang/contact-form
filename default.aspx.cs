@@ -16,19 +16,19 @@ public partial class _Default : System.Web.UI.Page
             //Create the msg object to be sent
             MailMessage msg = new MailMessage();
             //Add your email address to the recipients
-            msg.To.Add("nihwang12@gmail.com");
+            msg.To.Add("alexst@outlook.com");
             //Configure the address we are sending the mail from
-            MailAddress address = new MailAddress("nihwang12@gmail.com");
+            MailAddress address = new MailAddress("alexst@outlook.com");
             msg.From = address;
             //Append their name in the beginning of the subject
             msg.Subject = txtName.Text + " :  " + ddlSubject.Text;
             msg.Body = txtMessage.Text;
  
             //Configure an SmtpClient to send the mail.
-            SmtpClient client = new SmtpClient("smtp.gmail.com");
+            SmtpClient client = new SmtpClient("smtp.live.com");
             client.EnableSsl = false; //only enable this if your provider requires it
             //Setup credentials to login to our sender email address ("UserName", "Password")
-            NetworkCredential credentials = new NetworkCredential("nihwang12@gmail.com", "toma1286!");
+            NetworkCredential credentials = new NetworkCredential("alexst@outlook.com", "M47pPrbdXT7QR65f");
             client.Credentials = credentials;
  
             //Send the msg
